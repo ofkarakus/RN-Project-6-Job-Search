@@ -6,7 +6,7 @@ export const reducer = (state, action) => {
     case 'REMOVE_JOB':
       let newList = [...state.savedJobs]
       newlist = newList.filter((item) => {
-        item.id != action.payload.job.id
+        return item.id != action.payload.job.id
       })
       return {...state, savedJobs:newlist}
 

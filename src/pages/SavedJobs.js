@@ -14,7 +14,7 @@ import {svdJobs} from '../styles';
 
 export const SavedJobs = () => {
   const savedJobs = useSelector((state) => state.savedJobs);
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const storeData = async () => {
     try {
@@ -36,7 +36,7 @@ export const SavedJobs = () => {
     return (
       <View style={svdJobs.item}>
         <Image source={{uri: item.company_logo}} style={svdJobs.img} />
-        {/* <TouchableOpacity
+        <TouchableOpacity
           style={svdJobs.xmark}
           onPress={() => {
             dispatch({type: 'REMOVE_JOB', payload: {job: item}});
@@ -45,7 +45,7 @@ export const SavedJobs = () => {
             source={require('../assets/x-mark.png')}
             style={svdJobs.xmarkImg}
           />
-        </TouchableOpacity> */}
+        </TouchableOpacity>
         <View style={svdJobs.descContainer}>
           <Text style={svdJobs.title}>
             {item.title} - {item.type}
