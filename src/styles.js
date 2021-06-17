@@ -15,11 +15,11 @@ export const introduction = StyleSheet.create({
     textAlign: 'center',
     fontWeight: 'bold',
     fontSize: 23,
-    marginTop: 30,
+    marginTop: 45,
+    marginBottom: -25,
   },
   lang: {
-    padding: 15,
-    margin: 10,
+    marginHorizontal: 20,
   },
   back: {
     flex: 1,
@@ -67,8 +67,8 @@ export const jobs = StyleSheet.create({
   },
   savedJobs: {
     position: 'absolute',
-    bottom: 10,
-    right: 20,
+    bottom: 40,
+    right: 25,
     backgroundColor: '#81c784',
     padding: 5,
     borderRadius: 5,
@@ -81,7 +81,7 @@ export const svdJobs = StyleSheet.create({
     alignItems: 'center',
   },
   xmark: {
-    position :'absolute',
+    position: 'absolute',
     top: 0,
     right: 0,
     width: 20,
@@ -90,7 +90,7 @@ export const svdJobs = StyleSheet.create({
   xmarkImg: {
     width: 20,
     height: 20,
-    tintColor: 'red'
+    tintColor: 'red',
   },
   heading: {
     fontSize: 20,
@@ -109,7 +109,7 @@ export const svdJobs = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
     backgroundColor: 'white',
-    overflow: 'visible'
+    overflow: 'visible',
   },
   img: {
     resizeMode: 'contain',

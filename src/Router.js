@@ -4,7 +4,7 @@ import {createStore} from 'redux';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {Introduction, Jobs, SavedJobs} from './pages';
-import {reducer, initialState} from './context'
+import {reducer, initialState} from './context';
 
 const store = createStore(reducer, initialState);
 const Stack = createStackNavigator();

@@ -13,7 +13,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {svdJobs} from '../styles';
 
 export const SavedJobs = () => {
-  const savedJobs = useSelector((state) => state.savedJobs);
+  const savedJobs = useSelector(state => state.savedJobs);
   const dispatch = useDispatch();
 
   const storeData = async () => {

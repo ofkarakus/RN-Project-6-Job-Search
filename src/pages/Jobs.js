@@ -14,13 +14,13 @@ import {JobItem} from '../components';
 import {jobs} from '../styles';
 import {useDispatch, useSelector} from 'react-redux';
 
-export const Jobs = (props) => {
+export const Jobs = props => {
   const {selectedLang} = props.route.params;
   const [jobList, setJobList] = useState([]);
   const [modalFlag, setModalFlag] = useState(false);
   const [selectedJob, setSelectedJob] = useState('');
   const dispatch = useDispatch();
-  const savedJobs = useSelector((state) => state.savedJobs);
+  const savedJobs = useSelector(state => state.savedJobs);
 
   const getData = async () => {
     const response = await AsyncStorage.getItem('@SAVED_JOBS');
@@ -46,7 +46,7 @@ export const Jobs = (props) => {
     return (
       <JobItem
         job={item}
-        onSelect={(value) => {
+        onSelect={value => {
           setSelectedJob(value);
           setModalFlag(true);
         }}
@@ -83,7 +83,7 @@ export const Jobs = (props) => {
             <WebView source={{html: selectedJob.description}} />
           </View>
 
-          {savedJobs.findIndex((item) => selectedJob.id == item.id) == -1 ? (
+          {savedJobs.findIndex(item => selectedJob.id == item.id) == -1 ? (
             <TouchableOpacity
               style={jobs.btn}
               onPress={() => {

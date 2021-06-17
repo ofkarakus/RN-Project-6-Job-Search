@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 
 export const JobItem = ({job, onSelect}) => {
   return (
@@ -30,6 +30,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#212121',
     marginBottom: 7,
-    paddingBottom: 3
+    paddingBottom: 3,
   },
 });
